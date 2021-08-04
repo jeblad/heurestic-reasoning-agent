@@ -6,4 +6,4 @@ Some files in the repo has other licenses. In particular files from Pywikibot ha
 
 If you want to share your contributions, the way to do it is to create your own clone of the repository and make pull requests from branches you create in your own repository. Please respect use of linters, and you should also check your own code.
 
-Note that I might chose at some point to relicense the whole or parts of the repository.
+Note that I might choose at some point to change the license for the whole or parts of the repository.
