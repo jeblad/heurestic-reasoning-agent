@@ -30,4 +30,4 @@ A few signals can be sent to the agent:
 
 **PyCUDA** – The [PyCUDA](https://documen.tician.de/pycuda/) framework is used to integrate python at the host with CUDA at the device, and fascilitate easy adaptation of the code according to the actual configuration. (Some kernel parameters must be known at compile time, but those parameters are only known at runtime.)
 
-**Licenses** – The project as such is provided according to the Norwegian Copyright Lav ([Åndsverkloven](https://lovdata.no/dokument/NL/lov/2018-06-15-40)) with some additional rights granted. Parts from Pywikibo uses the MIT license.
+**Licenses** – The project as such has a [license](./LICENSE.md) according to the Norwegian Copyright Lav ([Åndsverkloven](https://lovdata.no/dokument/NL/lov/2018-06-15-40)) with some additional rights granted. Parts from Pywikibot uses the [MIT license](https://opensource.org/licenses/MIT).
