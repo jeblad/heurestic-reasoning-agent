@@ -23,3 +23,8 @@ The agent can be run in interactive mode, or daemonized. In both cases the agent
 A few signals can be sent to the agent:
 
   * …
+
+## Notes
+
+**Pywikibot** – Framework used to make configuration easy, but also to provide access to the knowledge base [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia) and [Wikidata](https://en.wikipedia.org/wiki/Wikidata).
+**Licenses** – The project as such is provided according to the Norwegian Copyright Lav ([Åndsverkloven](https://lovdata.no/dokument/NL/lov/2018-06-15-40)) with some additional rights granted. Parts from Pywikibo uses the MIT license.
