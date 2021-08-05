@@ -26,5 +26,8 @@ A few signals can be sent to the agent:
 
 ## Notes
 
-**Pywikibot** – Framework used to make configuration easy, but also to provide access to the knowledge base [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia) and [Wikidata](https://en.wikipedia.org/wiki/Wikidata).
+**Pywikibot** – The [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot) framework is used to make configuration easy, but also to provide access to the knowledge base [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia) and [Wikidata](https://en.wikipedia.org/wiki/Wikidata). Parts of the bot is included as necessary.
+
+**PyCUDA** – The [PyCUDA](https://documen.tician.de/pycuda/) framework is used to integrate python at the host with CUDA at the device, and fascilitate easy adaptation of the code according to the actual configuration. (Some kernel parameters must be known at compile time, but those parameters are only known at runtime.)
+
 **Licenses** – The project as such is provided according to the Norwegian Copyright Lav ([Åndsverkloven](https://lovdata.no/dokument/NL/lov/2018-06-15-40)) with some additional rights granted. Parts from Pywikibo uses the MIT license.
