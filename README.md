@@ -15,7 +15,7 @@ It should be enough to clone the repo, then `cd` into the folder, and then run t
 python3 load.py -family:abraxas agent
 ```
 
-When the agents resource requirements can't be satisfied it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
+When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
 
 An agent is given a name, and upon normal termination it will write out the complete state to a named file. The file can be used for later invocation of the same instance.
 
