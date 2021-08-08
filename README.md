@@ -12,7 +12,7 @@ This software creates and runs an agent continuously. The inputs (sensory data) 
 It should be enough to clone the repo, then `cd` into the folder, and then run the [software agent](https://en.wikipedia.org/wiki/Software_agent) with
 
 ```bash
-python3 load.py -family:abraxas agent
+python3 load-pyhera.py -family:abraxas agent
 ```
 
 When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
