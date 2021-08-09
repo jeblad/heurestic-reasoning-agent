@@ -1,0 +1,10 @@
+# This is a sample file.
+
+# Named family – the overall defining layout of the agent
+family: abraxas
+
+# Map logical unit to indexed device – where kernel code is running
+device:
+    neo: 0
+    assoc: 0
+    stack: 0
