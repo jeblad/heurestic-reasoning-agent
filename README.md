@@ -9,10 +9,16 @@ Heuristic Reasoning Agent (PyHERA) with [Python](https://en.wikipedia.org/wiki/P
 
 This software creates and runs an agent continuously. The inputs (sensory data) are injected on the [dendrites](https://en.wikipedia.org/wiki/Dendrite) artificial [synapses](https://en.wikipedia.org/wiki/Synapse), and the outputs (motor data) are extracted from [axons](https://en.wikipedia.org/wiki/Axon).
 
-It should be enough to clone the repo, then `cd` into the folder, and then run the [software agent](https://en.wikipedia.org/wiki/Software_agent) with
+It should be enough to clone the repo, then `cd` into the folder, and then build a [software agent](https://en.wikipedia.org/wiki/Software_agent) with
 
 ```bash
-python3 load-pyhera.py -family:abraxas agent
+python3 pyhera.py --family abraxas build
+```
+
+and then run the agent with
+
+```bash
+python3 pyhera.py --id <whatever> up
 ```
 
 When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
