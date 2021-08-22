@@ -27,7 +27,7 @@ class Up:
             help=_('run as daemon if possible (abort on command mode)'))
         self.parser.add_argument('--check',
             action='store_true',
-            help=_('check if the instance loads, and then abort'))
+            help=_('check if the agent loads, and then abort'))
         self.parser.add_argument('-c', '--command',
             action='store_true',
             help=_('open command mode'))
