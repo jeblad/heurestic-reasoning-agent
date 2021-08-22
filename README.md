@@ -15,29 +15,43 @@ It should be enough to clone the repo, then `cd` into the folder, and then build
 python3 pyhera.py --family abraxas build
 ```
 
-and then run the agent with
+and run the agent with
 
 ```bash
-python3 pyhera.py --id <whatever> up
+python3 pyhera.py --identifier <whatever> up
 ```
 
-When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
+After an agent is built, it can be identified either through its `identifier` or by its `name`. An identifier should be close to unique, while a name could have collisions. An identifier could be partial as long as it uniquely identifies an agent in the given context. In the case of `down` it means that if a single agent is running, then it is not necessary to provide any identifier.
 
-An agent is given a name, and upon normal termination it will write out the complete state to a named file. The file can be used for later invocation of the same instance.
+A running agent can be stopped with
+
+```bash
+python3 pyhera.py --identifier <whatever> down
+```
+
+and then destroyed with
+
+```bash
+python3 pyhera.py --identifier <whatever> desytroy
+```
+
+When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
+
+An agent has a name, and upon normal termination it will write out the complete state to a named file. The file can be used for later invocation of the same instance.
 
 The agent can be run in interactive mode, or daemonized. In both cases the agent will keep on running continuously on the device, unless it is run in single step mode. When run as a daemon stdin, stdout, and stderr will be redirected to specified devices.
 
 ## Theory
 
-A very short explanation of what this is; a number of columns are spread over a neocortex, where each column has an autoencoder for each layer, and autoencoders in each layer forms residual neural networks. There isn't a single autoencoder for each layer, as several neurons join together to make the autoencoder. They also represent values as sets of active neurons, and are not continuous values.
+A very short explanation of what kind of neural network this is; columns of autoencoders for each layer are evenly spaced over a neocortex, where autoencoders in each layer forms residual neural networks. There isn't a single autoencoder for each layer, as several neurons join together to make the autoencoder. They also represent values as sets of active neurons, and are not continuous values.
 
-It is a kind of misnomer to say a column forms one autoencoder inside each layer, as there are several (also of different types) but as a simplified description it holds.
+It is a kind of misnomer to say a column forms one autoencoder inside each layer, as there are several and also of different types of connections inside a column, but as a simplified description it holds.
 
-Some layers have internal and external mixins, which has the role of hardcoded routing in more traditional deep learning networks.
+Some layers have internal and external mixins, which has the role of hardcoded routing in more traditional deep learning networks, and in a biological neocortex it is done by corticocortical and intracortical connections.
 
-A neocortex has an assoc that create feedback on associations, which is a kind of softcoded routing.
+A neocortex has an assoc that create feedback on associations on activity in each column, letting other columns act on the association, which can be interpreted as a kind of softcoded routing.
 
-A neocortex has also a memory stack. This keeps a trace of what the neocortex is doing at any moment.
+There are also a memory stack for the neocortex, the assoc, which keeps a trace of what the neocortex is doing at any given moment.
 
 There is also patterns for creating expectations.
 
