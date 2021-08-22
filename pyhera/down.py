@@ -10,15 +10,12 @@ from pyhera import _
 
 class Down:
     def __init__(self, subcommand):
-        # initialize stuff
         self.subcommand = subcommand
 
     def __call__(self, args):
-        # do stuff when subcommand is called
         print('executing %s'%self)
 
     def __repr__(self):
-        # make a representation of the object
         return '<cmd> %s'%self.subcommand
 
     def make_subparser(self, parser):
