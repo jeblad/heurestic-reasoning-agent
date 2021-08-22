@@ -15,11 +15,25 @@ It should be enough to clone the repo, then `cd` into the folder, and then run t
 python3 load-pyhera.py -family:abraxas agent
 ```
 
-When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
+When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
 
 An agent is given a name, and upon normal termination it will write out the complete state to a named file. The file can be used for later invocation of the same instance.
 
 The agent can be run in interactive mode, or daemonized. In both cases the agent will keep on running continuously on the device, unless it is run in single step mode. When run as a daemon stdin, stdout, and stderr will be redirected to specified devices.
+
+## Theory
+
+A very short explanation of what this is; a number of columns are spread over a neocortex, where each column has an autoencoder for each layer, and autoencoders in each layer forms residual neural networks. There isn't a single autoencoder for each layer, as several neurons join together to make the autoencoder. They also represent values as sets of active neurons, and are not continuous values.
+
+It is a kind of misnomer to say a column forms one autoencoder inside each layer, as there are several (also of different types) but as a simplified description it holds.
+
+Some layers have internal and external mixins, which has the role of hardcoded routing in more traditional deep learning networks.
+
+A neocortex has an assoc that create feedback on associations, which is a kind of softcoded routing.
+
+A neocortex has also a memory stack. This keeps a trace of what the neocortex is doing at any moment.
+
+There is also patterns for creating expectations.
 
 ## Signals
 
