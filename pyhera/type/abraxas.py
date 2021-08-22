@@ -201,7 +201,7 @@ class MacroColumn(yaml.YAMLObject):
         neo = findParent(self, Neo)
         if neo == None:
             raise InconsistentError()
-        self.columns = [MicroColumn().build(self) for i in range(neo.block[-2])]
+        #self.columns = [MicroColumn().build(self) for i in range(neo.block[-2])]
         return self
 
 class MicroColumn(yaml.YAMLObject):
