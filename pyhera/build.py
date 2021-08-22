@@ -53,7 +53,7 @@ class Build:
     def make_subparser(self, parser):
         self.parser = parser.add_parser(self.subcommand,
             help=_('build an agent'),
-            description=_('Build the agent, but do not load and run it'))
+            description=_('Build the agent, but do not load or run it'))
         self.parser.add_argument('-t', '--type',
             required=True,
             type=str,
