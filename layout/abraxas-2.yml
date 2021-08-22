@@ -1,0 +1,7 @@
+!Brain
+  description: The "simple" layout for minimum resource usage
+  neos:
+    - !Neo
+      grid: d16/16
+      block: d4/64/8
+      index: 1

@@ -1,0 +1,21 @@
+!Brain
+  description: The "simple" layout for minimum resource usage
+  neos:
+    - !Neo
+      grid: d256/256
+      block: d4/64
+      index: 1
+      layers:
+        - !NeoLayer
+          columns:
+          - !SuperColumn
+            columns:
+              - !MacroColumn
+                columns:
+                  - !MicroColumn
+                    neurons:
+                      - !PyramidalNeuron
+                        synapses:
+                          - 1s2
+                          - 2s3
+                          - 3s4
