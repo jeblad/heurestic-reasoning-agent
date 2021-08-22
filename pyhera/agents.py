@@ -22,4 +22,7 @@ class Agents:
         self.parser = parser.add_parser(self.subcommand,
             help=_('list all available agents'),
             description=_('List all available agents'))
+        self.parser.add_argument('-a', '--agent',
+            type=str,
+            help=_('list only this agent name'))
         self.parser.set_defaults(action=self)
