@@ -7,108 +7,166 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-11 23:32+0200\n"
-"PO-Revision-Date: 2021-08-11 23:39+0200\n"
+"POT-Creation-Date: 2021-08-22 04:50+0200\n"
+"PO-Revision-Date: 2021-08-22 04:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 
-#: pyhera.py:24
+#: pyhera.py:40
 msgid "Heuristic Reasoning Agent – a service and a daemon for simple AI tasks."
 msgstr "Heuristic Reasoning Agent – en tjeneste og en daemon for enkle AI oppgaver."
 
-#: pyhera.py:25
+#: pyhera.py:41
 msgid "For further help, check the documentation."
 msgstr "For videre hjelp, sjekk dokumentasjonen."
 
-#: pyhera.py:28
+#: pyhera.py:44
 msgid "calculate and allocate, but do not load"
 msgstr "kalkuler og alloker, men last ikke inn"
 
-#: pyhera.py:32
+#: pyhera.py:48
 msgid "turn on increasing verbose mode"
 msgstr "slå på økende ordrik modus"
 
-#: pyhera.py:34
-msgid "subcommands"
-msgstr "underkommandoer"
-
-#: pyhera.py:35
-msgid "valid subcommands"
-msgstr "gyldige underkommandoer"
-
-#: pyhera.py:36
-msgid "help for subcommands"
-msgstr "hjelp for underkommandoer"
-
-#: pyhera.py:41
-msgid "build a named instances"
-msgstr "bygg en navngitt instans"
-
-#: pyhera.py:42
-msgid "Build the named instance, but do not load and run it"
-msgstr "Bygg navngitt instans, men last den ikke inn og kjør den"
-
-#: pyhera.py:45
-msgid "family name for the type of agent"
-msgstr "familienavn for typen agent"
-
-#: pyhera.py:48
-msgid "width of neo in macrocolumns"
-msgstr "bredden av neo i makrokolonner"
-
 #: pyhera.py:51
-msgid "height of neo in macrocolumns"
-msgstr "høyden av neo i makrokolonner"
+msgid "name for the specific agent"
+msgstr "navn for typen agent"
 
-#: pyhera.py:55
-msgid "destroy a named instances"
-msgstr "ødelegg en navngitt instans"
+#: pyhera.py:54
+msgid "identifier for the specific agent"
+msgstr "identifikator for typen agent"
 
-#: pyhera.py:56
-msgid "Destroy the named instance, unless it is running"
-msgstr "Ødelegg den navngitte instansen, hvis den ikke kjører"
-
-#: pyhera.py:59
+#: pyhera.py:57
 msgid "continue without asking"
 msgstr "fortsett uten spørsmål"
 
-#: pyhera.py:63
-msgid "load and run a named instance"
-msgstr "last inn og kjør en navngitt instans"
+#: pyhera.py:59
+msgid "subcommands"
+msgstr "underkommandoer"
 
-#: pyhera.py:64
-msgid "Load and run the named instance"
-msgstr "Last inn og kjør den navngitte instansen"
+#: pyhera.py:60
+msgid "valid subcommands"
+msgstr "gyldige underkommandoer"
 
-#: pyhera.py:67
+#: pyhera.py:61
+msgid "help for subcommands"
+msgstr "hjelp for underkommandoer"
+
+#: pyhera/build.py:55
+msgid "build an agent"
+msgstr "bygg en agent"
+
+#: pyhera/build.py:56
+msgid "Build the agent, but do not load or run it"
+msgstr "Bygg agenten, men last den ikke inn eller kjør den"
+
+#: pyhera/build.py:60
+msgid "type name for the agent"
+msgstr "navn på agentens type"
+
+#: pyhera/build.py:64
+msgid "layout name for the agent"
+msgstr "navn på agentens utlegg"
+
+#: pyhera/destroy.py:23
+msgid "destroy an agent"
+msgstr "ødelegg en agent"
+
+#: pyhera/destroy.py:24
+msgid "Destroy the agent, unless it is running"
+msgstr "Ødelegg agenten, hvis den ikke kjører"
+
+#: pyhera/up.py:23
+msgid "load and start an agent"
+msgstr "last inn og start en agent"
+
+#: pyhera/up.py:24
+msgid "Load and start the agent"
+msgstr "Last inn og kjør agenten"
+
+#: pyhera/up.py:27
 msgid "run as daemon if possible (abort on command mode)"
-msgstr "kjør som en daemon hvis mulig (avbryt ved kommando modus)"
+msgstr "kjør som demon hvis mulig (avbryt ved kommandomodus)"
 
-#: pyhera.py:70
-msgid "check if the instance loads, and then abort"
-msgstr "sjekk om instansen laster, og avbryt deretter"
+#: pyhera/up.py:30
+msgid "check if the agent loads, and then abort"
+msgstr "sjekk om agenten laster, og avbryt deretter"
 
-#: pyhera.py:73
+#: pyhera/up.py:33
 msgid "open command mode"
-msgstr "åpne kommando modus"
+msgstr "åpne kommandomodus"
 
-#: pyhera.py:77
+#: pyhera/up.py:37
 msgid "one or N single steps in command mode"
-msgstr "én eller N enkle steg i kommando modus"
+msgstr "én eller N enkle steg i kommandomodus"
 
-#: pyhera.py:80
+#: pyhera/up.py:40
 msgid "index for device to populate"
-msgstr "indeksen til enheten som skal befolkes"
+msgstr "indeks for enheten som skal befolkes"
 
-#: pyhera.py:84
-msgid "list all available named instances"
-msgstr "list alle tilgjengelige navngitte instanser"
+#: pyhera/down.py:23
+msgid "stop and unload an agent"
+msgstr "stopp og last ut en agent"
 
-#: pyhera.py:85
-msgid "List all available named instances"
-msgstr "List alle tilgjengelige navngitte instanser"
+#: pyhera/down.py:24
+msgid "Stop and unload the agent"
+msgstr "Stopp og last ut agenten"
+
+#: pyhera/agents.py:23
+msgid "list all available agents"
+msgstr "list alle tilgjengelige agenter"
+
+#: pyhera/agents.py:24
+msgid "List all available agents"
+msgstr "List alle tilgjengelige agenter"
+
+#: pyhera/agents.py:27
+msgid "list only this agent name"
+msgstr "list bare denne navngitte agenten"
+
+#: pyhera/devices.py:23
+msgid "list all available devices"
+msgstr "list alle tilgjengelige enheter"
+
+#: pyhera/devices.py:24
+msgid "List all available devices"
+msgstr "List alle tilgjengelige enheter"
+
+#: pyhera/devices.py:27
+msgid "list only this device name"
+msgstr "list bare denne navngitte enheten"
+
+#: pyhera/layouts.py:29
+msgid "list all available layouts"
+msgstr "list alle tilgjengelige utlegg"
+
+#: pyhera/layouts.py:30
+msgid "List all available layouts"
+msgstr "List alle tilgjengelige utlegg"
+
+#: pyhera/layouts.py:33
+msgid "list only this layout name"
+msgstr "list bare dette navngitte utlegget"
+
+#: pyhera/types.py:39
+msgid "list all available types"
+msgstr "list alle tilgjengelige typer"
+
+#: pyhera/types.py:40
+msgid "List all available types"
+msgstr "List alle tilgjengelige typer"
+
+#: pyhera/types.py:43
+msgid "list only this type name"
+msgstr "list bare dette navngitte utlegget"
+
+#~ msgid "width of neo in macrocolumns"
+#~ msgstr "bredden av neo i makrokolonner"
+
+#~ msgid "height of neo in macrocolumns"
+#~ msgstr "høyden av neo i makrokolonner"
