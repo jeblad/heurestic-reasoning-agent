@@ -22,4 +22,7 @@ class Devices:
         self.parser = parser.add_parser(self.subcommand,
             help=_('list all available devices'),
             description=_('List all available devices'))
+        self.parser.add_argument('-d', '--device',
+            type=str,
+            help=_('list only this device name'))
         self.parser.set_defaults(action=self)
