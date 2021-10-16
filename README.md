@@ -5,9 +5,13 @@
 
 Heuristic Reasoning Agent (PyHERA) with [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) at host and [CUDA](https://en.wikipedia.org/wiki/CUDA) at device, integrated with [PyCUDA](https://documen.tician.de/pycuda/).
 
+There are separate subrepositories for each of the models.
+
 ## Usage
 
-This software creates and runs an agent continuously. The inputs (sensory data) are injected on the [dendrites](https://en.wikipedia.org/wiki/Dendrite) artificial [synapses](https://en.wikipedia.org/wiki/Synapse), and the outputs (motor data) are extracted from [axons](https://en.wikipedia.org/wiki/Axon).
+The managing software creates and runs an agent continuously. The inputs (sensory data) are injected on the [dendrites](https://en.wikipedia.org/wiki/Dendrite) artificial [synapses](https://en.wikipedia.org/wiki/Synapse), and the outputs (motor data) are extracted from [axons](https://en.wikipedia.org/wiki/Axon).
+
+### Primary commands
 
 It should be enough to clone the repo, then `cd` into the folder, and then build a [software agent](https://en.wikipedia.org/wiki/Software_agent) with
 
@@ -21,7 +25,7 @@ and run the agent with
 python3 pyhera.py --identifier <whatever> up
 ```
 
-After an agent is built, it can be identified either through its `identifier` or by its `name`. An identifier should be close to unique, while a name could have collisions. An identifier could be partial as long as it uniquely identifies an agent in the given context. In the case of `down` it means that if a single agent is running, then it is not necessary to provide any identifier.
+After building an agent, it can be identified either through `--identifier` or in some cases by `--name` if it is unique. Identifiers of UUID type should be close to unique, while a name could have a lot of collisions. An identifier could be partial as long as it uniquely identifies an agent in the given context. In the case of the subcommand `down` it means that if a single agent is running, then it is not necessary to provide any identifier.
 
 A running agent can be stopped with
 
@@ -35,11 +39,44 @@ and then destroyed with
 python3 pyhera.py --identifier <whatever> desytroy
 ```
 
-When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device is somehow constrained. To check if the device has sufficient resources, use the `-simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
+When the agents resource requirements can't be satisfied, it will dump an error report. Usually because the device hit some limit. To check if the device has sufficient resources, use the `--simulate` argument. The agent will then do all the calculations, but not load code and data into the device.
 
 An agent has a name, and upon normal termination it will write out the complete state to a named file. The file can be used for later invocation of the same instance.
 
-The agent can be run in interactive mode, or daemonized. In both cases the agent will keep on running continuously on the device, unless it is run in single step mode. When run as a daemon stdin, stdout, and stderr will be redirected to specified devices.
+The agent can be run in `--interactive` mode, or `--daemon` mode. In both cases the agent will keep on running continuously on the device, unless it is run in single step mode. In interactive mode the agent will not detach from the console, while in daemon mode it will detach.
+
+### Secondary commands
+
+Not only the software can be installed, but the built agents too. That makes it possible to start them without logging in to a specific account.
+
+An agent can be installed with
+
+```bash
+python3 pyhera.py --identifier <whatever> install
+```
+
+and then uninstalled with
+
+```bash
+python3 pyhera.py --identifier <whatever> uninstall
+```
+
+Installing an agent can only happen when the agent is down, and there is no conflicting entries. Likewise, the agent can only be uninstalled when the agent is down and there is no conflicting entries. While installing (and uninstalling) a copy of the configuration will be placed in the “install” directory (or “work” directory), and the original removed from the “work” directory (or “install” directory).
+
+Parts of the brain can be extended after initial configuration. Those parts are typically widths and heights, if those can be extended without conflicting offsets.
+
+```bash
+python3 pyhera.py --identifier <whatever> grow
+```
+
+It is not possible to shrink the brain the same way.
+
+A few lists can be made for maintenance purposes
+
+- agents – installed to the common directory
+- devices – available on or from the host
+- layouts – available layouts
+- families – available modules
 
 ## Theory
 
