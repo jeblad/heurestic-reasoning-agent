@@ -12,4 +12,4 @@ or
 xgettext --files-from=locales/POTFILES.in --language Python --output locales/pyhera.pot
 ```
 
-Use poedit to open a file for editing, and then import the new pot-file.
+Use `poedit` to open a file for editing, and then import the new pot-file.
