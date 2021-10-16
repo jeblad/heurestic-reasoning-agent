@@ -3,7 +3,7 @@
 #
 # (C) John Erling Blad, 2021
 #
-# Distributed under the Norwegian Copyright Law (Åndsverksloven)
+# Distributed under GNU AFFERO GENERAL PUBLIC LICENSE v3 ONLY
 #
 from time import strftime
 
@@ -13,7 +13,7 @@ __version__ = '0.0.0'
 __description__ = 'Python HERA Agent Framework'
 __maintainer__ = 'John Erling Blad'
 __maintainer_email__ = 'jeblad@gmail.com'
-__license__ = 'Norwegian Copyright Law'
+__license__ = 'AGPL-3.0-only'
 __url__ = 'https://jeblad.gmail.io/PyHERA'
 __download_url__ = 'https://github.com/jeblad/pyhera.git'
 __copyright__ = '(C) John Erling Blad, 2021-' + strftime('%Y')
