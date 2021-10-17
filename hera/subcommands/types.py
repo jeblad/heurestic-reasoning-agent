@@ -1,7 +1,7 @@
 """The types subcommand."""
 
 #
-# Distributed according to Norwegian Copyright law.
+# Distributed according to GNU Affero General Public License v3 Only.
 # Copyright (C) 2021, John Erling Blad <jeblad@gmail.com>
 #
 
