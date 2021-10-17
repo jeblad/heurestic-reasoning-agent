@@ -9,7 +9,7 @@ from time import strftime
 
 __name__ = 'pyhera'
 __version__ = '0.0.0'
-__description__ = 'Python HERA Agent Framework for managing and running AI models'
+__description__ = 'Python HERA Agent Framework for managing and running AI models.'
 __maintainer__ = 'John Erling Blad'
 __maintainer_email__ = 'jeblad@gmail.com'
 __license__ = 'AGPL-3.0-only'
