@@ -7,20 +7,21 @@
 
 import argparse
 import sys
+from pathlib import Path
 
 from hera import *
 from hera import _
 
-from hera.build import Build
-from hera.destroy import Destroy
-from hera.up import Up
-from hera.down import Down
-from hera.install import Install
-from hera.grow import Grow
-from hera.agents import Agents
-from hera.devices import Devices
-from hera.types import Types
-from hera.layouts import Layouts
+from hera.subcommands.build import Build
+from hera.subcommands.destroy import Destroy
+from hera.subcommands.up import Up
+from hera.subcommands.down import Down
+#from hera.subcommands.install import Install
+#from hera.subcommands.grow import Grow
+from hera.subcommands.agents import Agents
+from hera.subcommands.devices import Devices
+from hera.subcommands.types import Types
+from hera.subcommands.layouts import Layouts
 import hera.logger as logger
 
 commands = []
@@ -28,8 +29,8 @@ commands.append(Build('build'))
 commands.append(Destroy('destroy'))
 commands.append(Up('up'))
 commands.append(Down('down'))
-commands.append(Install('install'))
-commands.append(Grow('grow'))
+#commands.append(Install('install'))
+#commands.append(Grow('grow'))
 commands.append(Agents('agents'))
 commands.append(Devices('devices'))
 commands.append(Types('types'))
@@ -98,6 +99,7 @@ def main():
     
     args = parser.parse_args()
 
+    Path(args.log_file).mkdir(parents=True, exist_ok=True)
     logger.init(args.log_file, args.debug)
 
     try:

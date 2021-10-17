@@ -20,7 +20,7 @@ except ImportError:
 
 
 #local libs
-from pyhera import _
+from hera import _
 
 class Build:
     def __init__(self, subcommand):
@@ -68,4 +68,6 @@ class Build:
         self.data = yaml.load(stream, Loader=Loader)
 
     def dump(self ):
-        yaml.dump(self.data, stream)
+        # yaml.dump(self.data, stream)
+        pass
+    

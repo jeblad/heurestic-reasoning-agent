@@ -6,7 +6,7 @@
 #
 
 import argparse
-from pyhera import _
+from hera import _
 
 class Up:
     def __init__(self, subcommand):

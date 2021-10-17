@@ -10,7 +10,7 @@
 import pkgutil
 import re
 
-from pyhera import _
+from hera import _
 
 _exclude_pattern = re.compile(r'\/__.+__\.py$')
 
