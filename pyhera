@@ -16,7 +16,7 @@ from hera.subcommands.build import Build
 from hera.subcommands.destroy import Destroy
 from hera.subcommands.up import Up
 from hera.subcommands.down import Down
-#from hera.subcommands.install import Install
+from hera.subcommands.install import Install
 #from hera.subcommands.grow import Grow
 from hera.subcommands.agents import Agents
 from hera.subcommands.devices import Devices
@@ -29,7 +29,7 @@ commands.append(Build('build'))
 commands.append(Destroy('destroy'))
 commands.append(Up('up'))
 commands.append(Down('down'))
-#commands.append(Install('install'))
+commands.append(Install('install'))
 #commands.append(Grow('grow'))
 commands.append(Agents('agents'))
 commands.append(Devices('devices'))
