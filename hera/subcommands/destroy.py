@@ -5,7 +5,6 @@
 # Copyright (C) 2021, John Erling Blad <jeblad@gmail.com>
 #
 
-import argparse
 from hera import _
 
 class Destroy:
@@ -23,4 +22,3 @@ class Destroy:
             help=_('destroy an agent'),
             description=_('Destroy the agent, unless it is running'))
         self.parser.set_defaults(action=self)
-
