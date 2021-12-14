@@ -1,0 +1,3 @@
+[submodule "doc"]
+	path = doc
+	url = https://github.com/jeblad/heurestic-reasoning-agent.wiki.git
