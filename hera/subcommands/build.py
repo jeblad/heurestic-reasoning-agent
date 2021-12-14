@@ -12,7 +12,6 @@ import uuid
 from typing import Text
 
 import hera
-import hera.name as name
 from hera.verify import Verify as makeVerify
 import hera.logger as logger
 from hera import _
@@ -68,11 +67,6 @@ class Build:
         
         makeVerify(self.subcommand, config['id'] if 'id' in config else None, 'id', True) \
             .exists().isInstance(Text).isUUID()
-
-        if not 'name' in config:
-            config['name'] = name.get(config['id'], config.get('gender', None))
-        makeVerify(self.subcommand, config['name'] if 'name' in config else None, 'name', True) \
-            .exists().isInstance(Text).isNormalized().match(r'^(?:[-]|[^\W])+$')
 
         makeVerify(self.subcommand, config['family'] if 'family' in config else None, 'family', True) \
             .exists().isInstance(Text).isNormalized().match(r'^[-_a-z]+$')

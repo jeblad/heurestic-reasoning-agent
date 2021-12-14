@@ -59,9 +59,9 @@ def main():
     parser.add_argument('-d', '--debug',
         action='store_true',
         help=_('log debug info'))
-    parser.add_argument('-n', '--name',
+    parser.add_argument('-c', '--callsign',
         type=str,
-        help=_('name for the specific agent'))
+        help=_('callsign for the specific agent'))
     parser.add_argument('-i', '--id',
         type=str,
         help=_('id for the specific agent'))
