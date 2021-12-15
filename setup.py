@@ -19,9 +19,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 ip_address__ = get_ip()
+#    copyright = '(C) John Erling Blad, 2021-' + strftime('%Y'),
 
 setuptools.setup(
-    control_url = 'https://%s/hera/'%(get_ip()),
-    copyright = '(C) John Erling Blad, 2021-' + strftime('%Y'),
+    project_urls={
+        'Issues': 'https://github.com/jeblad/heurestic-reasoning-agent/issues',
+        'Control': 'https://%s/hera/'%(get_ip())
+    },
     scripts=['bin/hera']
 )
