@@ -7,7 +7,7 @@
 
 from hera import _
 
-class Destroy:
+class Subcmd:
     def __init__(self, subcommand):
         self.subcommand = subcommand
 

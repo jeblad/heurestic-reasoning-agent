@@ -8,7 +8,7 @@
 import argparse
 from hera import _
 
-class Down:
+class Subcmd:
     def __init__(self, subcommand):
         self.subcommand = subcommand
 

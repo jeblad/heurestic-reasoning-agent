@@ -16,7 +16,7 @@ from hera.verify import Verify as makeVerify
 import hera.logger as logger
 from hera import _
 
-class Build:
+class Subcmd:
     def __init__(self, subcommand=None):
         self.subcommand = subcommand or __class__.__name__.lower()
 

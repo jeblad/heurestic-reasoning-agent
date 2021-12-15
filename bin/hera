@@ -8,39 +8,20 @@
 import sys
 import os
 import argparse
+import importlib
+import importlib.resources
 from pathlib import Path
 
 from hera import *
 from hera import _
+import hera.subcommands
 
-from hera.subcommands.build import Build
-from hera.subcommands.destroy import Destroy
-from hera.subcommands.up import Up
-from hera.subcommands.down import Down
-from hera.subcommands.install import Install
-#from hera.subcommands.grow import Grow
-from hera.subcommands.agents import Agents
-from hera.subcommands.devices import Devices
-from hera.subcommands.types import Types
-from hera.subcommands.layouts import Layouts
 import hera.logger as logger
-
-commands = []
-commands.append(Build('build'))
-commands.append(Destroy('destroy'))
-commands.append(Up('up'))
-commands.append(Down('down'))
-commands.append(Install('install'))
-#commands.append(Grow('grow'))
-commands.append(Agents('agents'))
-commands.append(Devices('devices'))
-commands.append(Types('types'))
-commands.append(Layouts('layouts'))
 
 def main():
     parser = argparse.ArgumentParser(
         prog=PROG_NAME,
-        description=_('Heuristic Reasoning Agent – a service and a daemon for simple AI tasks.'),
+        description=_('Heuristic Reasoning Agent – build and manage AI-agents.'),
         epilog=_('For further help, check the documentation.'))
     parser.add_argument('-s', '--simulate',
         action='store_true',
@@ -95,8 +76,14 @@ def main():
         description=_('valid subcommands'),
         help=_('help for subcommands'))
 
-    for cmd in commands:
-        cmd.make_subparser(subparsers)
+    for name in hera.subcommands.__all__:
+        try:
+            mod = importlib.import_module('hera.subcommands.%s'%(name))
+        except:
+            print(sys.exc_info())
+        if mod:
+            subcmd = mod.Subcmd(name)
+            subcmd.make_subparser(subparsers)
     
     args = parser.parse_args()
 
@@ -109,7 +96,6 @@ def main():
         logger.error(e)
         print(e, file=sys.stderr)
         exit()
-
 
 if __name__ == '__main__':
     main()

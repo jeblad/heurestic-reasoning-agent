@@ -13,7 +13,7 @@ from hera import verify as verify
 from hera import _
 import hera.logger as logger
 
-class Install:
+class Subcmd:
     def __init__(self, subcommand=None):
         self.subcommand = subcommand or __class__.__name__.lower()
 

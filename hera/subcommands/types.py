@@ -16,7 +16,7 @@ from hera import _
 
 _exclude_pattern = re.compile(r'\/__.+__\.py$')
 
-class Types:
+class Subcmd:
     def __init__(self, subcommand):
         self.subcommand = subcommand
 
