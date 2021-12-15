@@ -21,7 +21,7 @@ import hera.logger as logger
 def main():
     parser = argparse.ArgumentParser(
         prog=PROG_NAME,
-        description=_('Heuristic Reasoning Agent – build and manage AI-agents.'),
+        description=_('Heuristic Reasoning Agent – A framework for creating agents from models, and running and managing the agents.'),
         epilog=_('For further help, check the documentation.'))
     parser.add_argument('-s', '--simulate',
         action='store_true',
