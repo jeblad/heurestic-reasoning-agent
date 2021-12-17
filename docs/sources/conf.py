@@ -17,8 +17,8 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = u'Test LvL 42'
-copyright = u'2020, John Erling Blad'
+project = u'Heuristic Reasoning Agent'
+copyright = u'2021, John Erling Blad'
 author = u'John Erling Blad'
 
 # The full version, including alpha/beta/rc tags
