@@ -1,0 +1,271 @@
+# Norwegian Bokmål translation of PyHERA.
+# Copyright (C) 2021 John Erling Blad
+# This file is distributed under the same license as the pyhera package.
+# John Erling Blad <jeblad@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 04:49+0100\n"
+"PO-Revision-Date: 2021-12-15 05:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+
+#: bin/hera:24
+msgid ""
+"Heuristic Reasoning Agent – A framework for creating agents from models, and "
+"running and managing the agents."
+msgstr ""
+"Heuristic Reasoning Agent – Et rammeverk for å skape agenter fra modeller, "
+"og kjøre og administrere agentene."
+
+#: bin/hera:25
+msgid "For further help, check the documentation."
+msgstr "For videre hjelp, sjekk dokumentasjonen."
+
+#: bin/hera:28
+msgid "calculate and allocate, but do not load"
+msgstr "kalkuler og alloker, men last ikke inn"
+
+#: bin/hera:32
+msgid "turn on increasing verbose mode"
+msgstr "slå på økende ordrik modus"
+
+#: bin/hera:35
+msgid "turn off most informal reporting"
+msgstr "slå av mesteparten av rapportert informasajon"
+
+#: bin/hera:39
+msgid "turn on increasing continuation mode"
+msgstr "slå på modus for økende fortsettelse"
+
+#: bin/hera:42
+msgid "log debug info"
+msgstr ""
+
+#: bin/hera:45
+msgid "callsign for the specific agent"
+msgstr "kallenavn for agenten"
+
+#: bin/hera:48
+#, fuzzy
+#| msgid "name for the specific agent"
+msgid "id for the specific agent"
+msgstr "navn for typen agent"
+
+#: bin/hera:52
+msgid "file for process logging"
+msgstr ""
+
+#: bin/hera:56
+msgid "path to dir for process identification"
+msgstr ""
+
+#: bin/hera:60
+msgid "file name (a pattern) for process identification"
+msgstr ""
+
+#: bin/hera:64
+msgid "path to config dir for installation"
+msgstr ""
+
+#: bin/hera:67
+msgid "file for input"
+msgstr ""
+
+#: bin/hera:70
+msgid "file for output"
+msgstr ""
+
+#: bin/hera:74
+msgid "path to config dir for local work"
+msgstr ""
+
+#: bin/hera:75
+msgid "subcommands"
+msgstr "underkommandoer"
+
+#: bin/hera:76
+msgid "valid subcommands"
+msgstr "gyldige underkommandoer"
+
+#: bin/hera:77
+msgid "help for subcommands"
+msgstr "hjelp for underkommandoer"
+
+#: src/hera/subcommands/build.py:24
+#, python-format
+msgid "%s: started"
+msgstr ""
+
+#: src/hera/subcommands/build.py:43
+#, python-format
+msgid ""
+"%s: can not construct a valid input filename (use or increment “--force” to "
+"override)"
+msgstr ""
+
+#: src/hera/subcommands/build.py:55
+#, python-format
+msgid "%s: reading config from file \"%s\""
+msgstr ""
+
+#: src/hera/subcommands/build.py:61
+#, python-format
+msgid "%s: got configuration of an existing agent"
+msgstr ""
+
+#: src/hera/subcommands/build.py:83
+#, python-format
+msgid "%s: pid file exists (use \"--force\" to override)"
+msgstr ""
+
+#: src/hera/subcommands/build.py:96
+#, python-format
+msgid "%s: can not construct a valid output filename"
+msgstr ""
+
+#: src/hera/subcommands/build.py:101
+#, python-format
+msgid "%s: config written to file \"%s/%s\""
+msgstr ""
+
+#: src/hera/subcommands/build.py:103
+#, python-format
+msgid "%s: ended"
+msgstr ""
+
+#: src/hera/subcommands/build.py:110
+msgid "build an agent"
+msgstr "bygg en agent"
+
+#: src/hera/subcommands/build.py:111
+msgid "Build the agent, but do not load or run it"
+msgstr "Bygg agenten, men last den ikke inn eller kjør den"
+
+#: src/hera/subcommands/build.py:114
+msgid "family name for the agent"
+msgstr "navn på agentens modell"
+
+#: src/hera/subcommands/build.py:117 src/hera/subcommands/build.py:120
+msgid "layout name for the agent"
+msgstr "navn på agentens utlegg"
+
+#: src/hera/subcommands/destroy.py:22
+msgid "destroy an agent"
+msgstr "ødelegg en agent"
+
+#: src/hera/subcommands/destroy.py:23
+msgid "Destroy the agent, unless it is running"
+msgstr "Ødelegg agenten, hvis den ikke kjører"
+
+#: src/hera/subcommands/up.py:23
+msgid "load and start an agent"
+msgstr "last inn og start en agent"
+
+#: src/hera/subcommands/up.py:24
+msgid "Load and start the agent"
+msgstr "Last inn og kjør agenten"
+
+#: src/hera/subcommands/up.py:27
+msgid "run as daemon if possible (abort on command mode)"
+msgstr "kjør som demon hvis mulig (avbryt ved kommandomodus)"
+
+#: src/hera/subcommands/up.py:30
+msgid "check if the agent loads, and then abort"
+msgstr "sjekk om agenten laster, og avbryt deretter"
+
+#: src/hera/subcommands/up.py:33
+msgid "open command mode"
+msgstr "åpne kommandomodus"
+
+#: src/hera/subcommands/up.py:37
+msgid "one or N single steps in command mode"
+msgstr "én eller N enkle steg i kommandomodus"
+
+#: src/hera/subcommands/up.py:40
+msgid "index for device to populate"
+msgstr "indeks for enheten som skal befolkes"
+
+#: src/hera/subcommands/down.py:23
+msgid "stop and unload an agent"
+msgstr "stopp og last ut en agent"
+
+#: src/hera/subcommands/down.py:24
+msgid "Stop and unload the agent"
+msgstr "Stopp og last ut agenten"
+
+#: src/hera/subcommands/agents.py:23
+msgid "list all available agents"
+msgstr "list alle tilgjengelige agenter"
+
+#: src/hera/subcommands/agents.py:24
+msgid "List all available agents"
+msgstr "List alle tilgjengelige agenter"
+
+#: src/hera/subcommands/agents.py:27
+msgid "list only this agent name"
+msgstr "list bare denne navngitte agenten"
+
+#: src/hera/subcommands/devices.py:23
+msgid "list all available devices"
+msgstr "list alle tilgjengelige enheter"
+
+#: src/hera/subcommands/devices.py:24
+msgid "List all available devices"
+msgstr "List alle tilgjengelige enheter"
+
+#: src/hera/subcommands/devices.py:27
+msgid "list only this device name"
+msgstr "list bare denne navngitte enheten"
+
+#: src/hera/subcommands/layouts.py:29
+msgid "list all available layouts"
+msgstr "list alle tilgjengelige utlegg"
+
+#: src/hera/subcommands/layouts.py:30
+msgid "List all available layouts"
+msgstr "List alle tilgjengelige utlegg"
+
+#: src/hera/subcommands/layouts.py:33
+msgid "list only this layout name"
+msgstr "list bare dette navngitte utlegget"
+
+#: src/hera/subcommands/types.py:39
+msgid "list all available types"
+msgstr "list alle tilgjengelige typer"
+
+#: src/hera/subcommands/types.py:40
+msgid "List all available types"
+msgstr "List alle tilgjengelige typer"
+
+#: src/hera/subcommands/types.py:43
+msgid "list only this type name"
+msgstr "list bare dette navngitte utlegget"
+
+#~ msgid ""
+#~ "Heuristic Reasoning Agent – a service and a daemon for simple AI tasks."
+#~ msgstr ""
+#~ "Heuristic Reasoning Agent – en tjeneste og en daemon for enkle AI "
+#~ "oppgaver."
+
+#~ msgid "identifier for the specific agent"
+#~ msgstr "identifikator for typen agent"
+
+#~ msgid "continue without asking"
+#~ msgstr "fortsett uten spørsmål"
+
+#~ msgid "type name for the agent"
+#~ msgstr "navn på agentens type"
+
+#~ msgid "width of neo in macrocolumns"
+#~ msgstr "bredden av neo i makrokolonner"
+
+#~ msgid "height of neo in macrocolumns"
+#~ msgstr "høyden av neo i makrokolonner"

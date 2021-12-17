@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-15 04:49+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: bin/hera:24
+msgid ""
+"Heuristic Reasoning Agent – A framework for creating agents from models, and "
+"running and managing the agents."
+msgstr ""
+
+#: bin/hera:25
+msgid "For further help, check the documentation."
+msgstr ""
+
+#: bin/hera:28
+msgid "calculate and allocate, but do not load"
+msgstr ""
+
+#: bin/hera:32
+msgid "turn on increasing verbose mode"
+msgstr ""
+
+#: bin/hera:35
+msgid "turn off most informal reporting"
+msgstr ""
+
+#: bin/hera:39
+msgid "turn on increasing continuation mode"
+msgstr ""
+
+#: bin/hera:42
+msgid "log debug info"
+msgstr ""
+
+#: bin/hera:45
+msgid "callsign for the specific agent"
+msgstr ""
+
+#: bin/hera:48
+msgid "id for the specific agent"
+msgstr ""
+
+#: bin/hera:52
+msgid "file for process logging"
+msgstr ""
+
+#: bin/hera:56
+msgid "path to dir for process identification"
+msgstr ""
+
+#: bin/hera:60
+msgid "file name (a pattern) for process identification"
+msgstr ""
+
+#: bin/hera:64
+msgid "path to config dir for installation"
+msgstr ""
+
+#: bin/hera:67
+msgid "file for input"
+msgstr ""
+
+#: bin/hera:70
+msgid "file for output"
+msgstr ""
+
+#: bin/hera:74
+msgid "path to config dir for local work"
+msgstr ""
+
+#: bin/hera:75
+msgid "subcommands"
+msgstr ""
+
+#: bin/hera:76
+msgid "valid subcommands"
+msgstr ""
+
+#: bin/hera:77
+msgid "help for subcommands"
+msgstr ""
+
+#: src/hera/subcommands/build.py:24
+#, python-format
+msgid "%s: started"
+msgstr ""
+
+#: src/hera/subcommands/build.py:43
+#, python-format
+msgid ""
+"%s: can not construct a valid input filename (use or increment “--force” to "
+"override)"
+msgstr ""
+
+#: src/hera/subcommands/build.py:55
+#, python-format
+msgid "%s: reading config from file \"%s\""
+msgstr ""
+
+#: src/hera/subcommands/build.py:61
+#, python-format
+msgid "%s: got configuration of an existing agent"
+msgstr ""
+
+#: src/hera/subcommands/build.py:83
+#, python-format
+msgid "%s: pid file exists (use \"--force\" to override)"
+msgstr ""
+
+#: src/hera/subcommands/build.py:96
+#, python-format
+msgid "%s: can not construct a valid output filename"
+msgstr ""
+
+#: src/hera/subcommands/build.py:101
+#, python-format
+msgid "%s: config written to file \"%s/%s\""
+msgstr ""
+
+#: src/hera/subcommands/build.py:103
+#, python-format
+msgid "%s: ended"
+msgstr ""
+
+#: src/hera/subcommands/build.py:110
+msgid "build an agent"
+msgstr ""
+
+#: src/hera/subcommands/build.py:111
+msgid "Build the agent, but do not load or run it"
+msgstr ""
+
+#: src/hera/subcommands/build.py:114
+msgid "family name for the agent"
+msgstr ""
+
+#: src/hera/subcommands/build.py:117 src/hera/subcommands/build.py:120
+msgid "layout name for the agent"
+msgstr ""
+
+#: src/hera/subcommands/destroy.py:22
+msgid "destroy an agent"
+msgstr ""
+
+#: src/hera/subcommands/destroy.py:23
+msgid "Destroy the agent, unless it is running"
+msgstr ""
+
+#: src/hera/subcommands/up.py:23
+msgid "load and start an agent"
+msgstr ""
+
+#: src/hera/subcommands/up.py:24
+msgid "Load and start the agent"
+msgstr ""
+
+#: src/hera/subcommands/up.py:27
+msgid "run as daemon if possible (abort on command mode)"
+msgstr ""
+
+#: src/hera/subcommands/up.py:30
+msgid "check if the agent loads, and then abort"
+msgstr ""
+
+#: src/hera/subcommands/up.py:33
+msgid "open command mode"
+msgstr ""
+
+#: src/hera/subcommands/up.py:37
+msgid "one or N single steps in command mode"
+msgstr ""
+
+#: src/hera/subcommands/up.py:40
+msgid "index for device to populate"
+msgstr ""
+
+#: src/hera/subcommands/down.py:23
+msgid "stop and unload an agent"
+msgstr ""
+
+#: src/hera/subcommands/down.py:24
+msgid "Stop and unload the agent"
+msgstr ""
+
+#: src/hera/subcommands/agents.py:23
+msgid "list all available agents"
+msgstr ""
+
+#: src/hera/subcommands/agents.py:24
+msgid "List all available agents"
+msgstr ""
+
+#: src/hera/subcommands/agents.py:27
+msgid "list only this agent name"
+msgstr ""
+
+#: src/hera/subcommands/devices.py:23
+msgid "list all available devices"
+msgstr ""
+
+#: src/hera/subcommands/devices.py:24
+msgid "List all available devices"
+msgstr ""
+
+#: src/hera/subcommands/devices.py:27
+msgid "list only this device name"
+msgstr ""
+
+#: src/hera/subcommands/layouts.py:29
+msgid "list all available layouts"
+msgstr ""
+
+#: src/hera/subcommands/layouts.py:30
+msgid "List all available layouts"
+msgstr ""
+
+#: src/hera/subcommands/layouts.py:33
+msgid "list only this layout name"
+msgstr ""
+
+#: src/hera/subcommands/types.py:39
+msgid "list all available types"
+msgstr ""
+
+#: src/hera/subcommands/types.py:40
+msgid "List all available types"
+msgstr ""
+
+#: src/hera/subcommands/types.py:43
+msgid "list only this type name"
+msgstr ""
