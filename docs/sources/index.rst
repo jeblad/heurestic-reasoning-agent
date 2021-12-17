@@ -16,6 +16,7 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
    :maxdepth: 2
 
    topics/command-hera.rst
+   topics/basic-use.rst
 
 
 .. toctree::
