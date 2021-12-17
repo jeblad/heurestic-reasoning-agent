@@ -1,7 +1,7 @@
-Heuristic Reasoning Agent
-=========================
+License
+=======
 
-A framework for building agents from models, and running and managing the created agents.
+*Heuristic Reasoning Agent – A framework for building agents from models, and running and managing the created agents.*
 
 *Copyright (C) 2021 John Erling Blad <mailto:jeblad@gmail.com>*
 
@@ -11,7 +11,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU Affero General Public License along with this program.  If not, see `gnu.org/licenses <http://www.gnu.org/licenses/>`_.
 
-ADDITIONAL TERMS
+Additional terms
 ----------------
 
 *The following should be preserved in the legal notices.*
