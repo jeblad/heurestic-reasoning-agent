@@ -1,7 +1,9 @@
-Code of Conduct – Be Nice
-=========================
+Code of Conduct
+===============
 
 Whether you've come to ask questions on issues, or to generously share what you know, remember that weʼre all here to learn and code together. Be welcoming and patient, especially with those who may not know everything you do. Oh, and bring your sense of humor, and Iʼll try using mine too. Just in case.
+
+*In a nutshell: **Be nice!***
 
 That basically covers it, but these points may help:
 
