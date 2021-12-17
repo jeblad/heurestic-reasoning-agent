@@ -20,7 +20,7 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
 
 
 .. toctree::
-   :caption: Guides
+   :caption: Terms
    :hidden:
    :maxdepth: 2
 
