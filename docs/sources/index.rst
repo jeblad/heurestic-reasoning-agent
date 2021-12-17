@@ -16,8 +16,17 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
    :maxdepth: 2
 
    readme.rst
-   license.rst
    topics/Command-hera.md
+
+
+.. toctree::
+   :caption: Guides
+   :hidden:
+   :maxdepth: 2
+
+   license.rst
+   contributing.rst
+   code_of_conduct.rst
 
 
 .. toctree::
