@@ -24,4 +24,4 @@ For these cases you should probably implement a `deterministic system <https://e
 
 *The following should be considered in the attribution notices.*
 
-The open source code is provided under the `Norwegian Copyright Law <https://lovdata.no/dokument/NL/lov/2018-06-15-40>`_(LOV-2018-06-15-40, åndsverksloven) and full author attribution should be given for any contribution of reasonable size. Still, authors may object to certain edits, and thereby deny attribution, thus blocking otherwise valid reuse of modified code.
+The open source code is provided under the `Norwegian Copyright Law <https://lovdata.no/dokument/NL/lov/2018-06-15-40>`_ (LOV-2018-06-15-40, åndsverksloven) and full author attribution should be given for any contribution of reasonable size. Still, authors may object to certain edits, and thereby deny attribution, thus blocking otherwise valid reuse of modified code.
