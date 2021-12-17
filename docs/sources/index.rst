@@ -15,7 +15,6 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
    :hidden:
    :maxdepth: 2
 
-   readme.rst
    topics/Command-hera.md
 
 
