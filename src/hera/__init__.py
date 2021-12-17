@@ -3,6 +3,7 @@
 # Copyright (C) 2021, John Erling Blad <jeblad@gmail.com>
 #
 
+import locale
 import gettext
 import os
 import os.path
@@ -23,11 +24,11 @@ if os.path.islink(path):
     path = os.readlink(path)
 
 WORKING_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(path)), os.pardir))
-LOCALE_DIR = os.path.join(WORKING_DIR, 'locales')
+LOCALE_DIR = os.path.join(os.path.abspath(os.path.join(WORKING_DIR, os.pardir)), 'locales')
 
-PROG_NAME = 'pyhera'
+PROG_NAME = 'hera'
 
-# get localizable messages
+locale.setlocale(locale.LC_ALL, '')
 gt = gettext.translation(PROG_NAME, localedir=LOCALE_DIR)
 _ = gt.gettext
 gt.install()
