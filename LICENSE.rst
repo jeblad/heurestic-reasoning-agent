@@ -1,5 +1,7 @@
-PyHERA – running and managing AI models
-=======================================
+Heuristic Reasoning Agent
+=========================
+
+A framework for creating agents from models, and running and managing the agents.
 
 *Copyright (C) 2021 John Erling Blad <mailto:jeblad@gmail.com>*
 
