@@ -34,8 +34,8 @@ master_doc = 'index'
 # ones.
 extensions = [
 	'sphinx.ext.intersphinx',
-	'recommonmark',
-	'sphinxcontrib.luadomain'
+	'recommonmark' #,
+	#'sphinxcontrib.luadomain'
 	#'sphinx_lua'
 ]
 
