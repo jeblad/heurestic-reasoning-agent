@@ -17,6 +17,7 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
 
    topics/command-hera.rst
    topics/basic-use.rst
+   topics/family-definitions.rst
 
 
 .. toctree::
