@@ -11,13 +11,14 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
 
 
 .. toctree::
-   :caption: Guides
+   :caption: Topics
    :hidden:
    :maxdepth: 2
 
    topics/command-hera.rst
    topics/basic-use.rst
    topics/family-definitions.rst
+   topics/neuron-model.rst
 
 
 .. toctree::
