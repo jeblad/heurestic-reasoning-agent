@@ -16,7 +16,7 @@ Welcome to Heuristic Reasoning Agentʼs documentation!
    :maxdepth: 2
 
    topics/command-hera.rst
-   topics/background.rst
+   topics/background-on-models.rst
    topics/basic-use.rst
    topics/family-definitions.rst
    topics/neuron-model.rst
