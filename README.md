@@ -91,15 +91,3 @@ A neocortex has an assoc that create feedback on associations on activity in eac
 There are also a memory stack for the neocortex, the assoc, which keeps a trace of what the neocortex is doing at any given moment.
 
 There is also patterns for creating expectations.
-
-## Signals
-
-A few signals can be sent to the agent:
-
-  * …
-
-## Notes
-
-**PyCUDA** – The [PyCUDA](https://documen.tician.de/pycuda/) framework is used to integrate python at the host with CUDA at the device, and facilitate easy adaptation of the code according to the actual configuration. Some kernel parameters must be known at compile time, but those parameters are only known at runtime, thus the code must be generated and compiled just before it is loaded onto the device.
-
-**Licenses** – The project as such has a [license](./LICENSE.md) according to the Norwegian Copyright Lav ([Åndsverkloven](https://lovdata.no/dokument/NL/lov/2018-06-15-40)) with some additional rights granted. As long as you donʼt do anything commercial, or have to change the code and republish, especially outside the educational domain like military or nuclear energy, it should be no problems at all.
