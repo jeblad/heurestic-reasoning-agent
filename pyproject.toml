@@ -1,6 +1,29 @@
-[build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+[tool.poetry]
+name = "pyhera"
+version = "0.1.0"
+description = "Heuristic Reasoning Agent – A framework for creating agents from models, and running and managing the agents."
+authors = ["John Erling Blad <jeblad@gmail.com>"]
+readme = "README.md"
+# packages = [{}]
+repository = "https://github.com/jeblad/heurestic-reasoning-agent"
+classifiers = [ # https://pypi.org/classifiers/
+    "Development Status :: 1 - Planning",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Environment :: Console",
+    "Environment :: No Input/Output (Daemon)",
+    "Programming Language :: Python :: 3.7",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research"
 ]
-build-backend = "setuptools.build_meta"
+
+[tool.poetry.dependencies]
+cliff = "*"
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
