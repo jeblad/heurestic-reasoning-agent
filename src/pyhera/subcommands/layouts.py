@@ -1,12 +1,18 @@
-"""The agents subcommand."""
+"""The layouts subcommand."""
 
 #
 # Distributed according to GNU Affero General Public License v3 Only.
 # Copyright (C) 2021, John Erling Blad <jeblad@gmail.com>
 #
 
-import argparse
-from hera import _
+# standard libs
+# import argparse
+import pkgutil
+import re
+
+from pyhera import _
+
+_exclude_pattern = re.compile(r'\/__.+__\.py$')
 
 class Subcmd:
     def __init__(self, subcommand):
@@ -20,9 +26,9 @@ class Subcmd:
 
     def make_subparser(self, parser):
         self.parser = parser.add_parser(self.subcommand,
-            help=_('list all available agents'),
-            description=_('List all available agents'))
-        self.parser.add_argument('-a', '--agent',
+            help=_('list all available layouts'),
+            description=_('List all available layouts'))
+        self.parser.add_argument('-l', '--layout',
             type=str,
-            help=_('list only this agent name'))
+            help=_('list only this layout name'))
         self.parser.set_defaults(action=self)

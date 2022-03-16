@@ -11,10 +11,10 @@ from unicodedata import is_normalized
 import uuid
 from typing import Text
 
-import hera
-from hera.verify import Verify as makeVerify
-import hera.logger as logger
-from hera import _
+import pyhera
+from pyhera.verify import Verify as makeVerify
+import pyhera.logger as logger
+from pyhera import _
 
 class Subcmd:
     def __init__(self, subcommand=None):
@@ -24,8 +24,8 @@ class Subcmd:
         logger.debug(_('%s: started')%(self.subcommand))
 
         opts = {}
-        opts |= hera.read_config('./pyhera.json', self.subcommand)
-        opts |= hera.read_config('~/.pyhera', self.subcommand)
+        opts |= pyhera.read_config('./pyhera.json', self.subcommand)
+        opts |= pyhera.read_config('~/.pyhera', self.subcommand)
         opts |= {k.replace('_', '-'): v for k, v in vars(args).items() if v is not None}
         opts |= opts.pop('build', {})
 
@@ -46,14 +46,14 @@ class Subcmd:
         layout = makeVerify(self.subcommand, opts['layout'] if 'layout' in opts else None, 'layout', False) \
             .exists().isInstance(Text).isNormalized().match(r'^[-_a-z0-9]+$').value()
         if layout:
-            config = hera.read_config('%s/layout/%s'%(install_path, '%s.json' % layout), self.subcommand)
+            config = pyhera.read_config('%s/layout/%s'%(install_path, '%s.json' % layout), self.subcommand)
         
         config |= opts
         if infile:
             fullpath = '%s/%s'%(work_path, infile)
             if not opts['silent']:
                 print(_('%s: reading config from file "%s"')%(self.subcommand, fullpath))
-            config |= hera.read_config(fullpath)
+            config |= pyhera.read_config(fullpath)
         
         incarnation = makeVerify(self.subcommand, config['incarnation'] if 'incarnation' in config else None, 'incarnation', False) \
             .exists().state()
@@ -78,13 +78,13 @@ class Subcmd:
             .exists().isInstance(Text).isNormalized().match(r'^(?:[-_. /%]|[^\W])+$').value()
 
         pid_file = '%s/%s'%(pid_path, pid_format % config['id'])
-        if hera.pid_exists(pid_file, self.subcommand):
+        if pyhera.pid_exists(pid_file, self.subcommand):
             if opts['force'] <= 0:
                 raise Exception(_('%s: pid file exists (use "--force" to override)')%(self.subcommand))
             opts['force'] -= 1
             os.unlink(pid_file)
 
-        family = hera.import_module(config['family'], self.subcommand, 'family')
+        family = pyhera.import_module(config['family'], self.subcommand, 'family')
         brain = family.build(config)
 
         outfile = makeVerify(self.subcommand, opts['out-file'] if 'out-file' in opts else None, 'out-file', False) \
@@ -95,7 +95,7 @@ class Subcmd:
         if not outfile:
             raise Exception(_('%s: can not construct a valid output filename')%(self.subcommand))
 
-        hera.write_config('%s/%s'%(work_path, outfile), brain, family.default)
+        pyhera.write_config('%s/%s'%(work_path, outfile), brain, family.default)
 
         if not opts['silent']:
             print(_('%s: config written to file "%s/%s"')%(self.subcommand, work_path, outfile))

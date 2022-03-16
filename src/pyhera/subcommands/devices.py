@@ -1,11 +1,12 @@
-"""The destroy subcommand."""
+"""The devices subcommand."""
 
 #
 # Distributed according to GNU Affero General Public License v3 Only.
 # Copyright (C) 2021, John Erling Blad <jeblad@gmail.com>
 #
 
-from hera import _
+import argparse
+from pyhera import _
 
 class Subcmd:
     def __init__(self, subcommand):
@@ -19,6 +20,9 @@ class Subcmd:
 
     def make_subparser(self, parser):
         self.parser = parser.add_parser(self.subcommand,
-            help=_('destroy an agent'),
-            description=_('Destroy the agent, unless it is running'))
+            help=_('list all available devices'),
+            description=_('List all available devices'))
+        self.parser.add_argument('-d', '--device',
+            type=str,
+            help=_('list only this device name'))
         self.parser.set_defaults(action=self)

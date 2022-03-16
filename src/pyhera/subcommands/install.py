@@ -8,10 +8,10 @@
 import os
 import os.path
 from typing import Text
-import hera
-from hera import verify as verify
-from hera import _
-import hera.logger as logger
+import pyhera
+from pyhera import verify as verify
+from pyhera import _
+import pyhera.logger as logger
 
 class Subcmd:
     def __init__(self, subcommand=None):
@@ -20,27 +20,27 @@ class Subcmd:
     def __call__(self, args):
         logger.debug(_('%s: reading config…')%(self.subcommand))
 
-        opts = hera.read_config('./pyhera.json') | hera.read_config('~/.pyhera')
+        opts = pyhera.read_config('./pyhera.json') | pyhera.read_config('~/.pyhera')
         opts |= {k: v for k, v in vars(args).items() if v is not None}
         opts |= opts.pop('up', {})
 
         work_path = None
         if verify.workpath(self.subcommand, opts, 'work-path', fatal=False):
-            work_path = work_path or hera.dir_exists(opts['work-path'])
+            work_path = work_path or pyhera.dir_exists(opts['work-path'])
         if not work_path:
             raise Exception(_('%s: can not locate local work directory')%(self.subcommand))
         
         infile = None
         if not verify.infile(self.subcommand, opts, 'in-file', fatal=False):
-            infile = infile or hera.file_exists('%s/%s'%(work_path, opts['in-file']))
+            infile = infile or pyhera.file_exists('%s/%s'%(work_path, opts['in-file']))
         if not verify.name(self.subcommand, opts, 'name', fatal=False):
-            infile = infile or hera.file_exists('%s/%s'%(work_path, '%s.json' % opts['name']))
+            infile = infile or pyhera.file_exists('%s/%s'%(work_path, '%s.json' % opts['name']))
         if not verify.id(self.subcommand, opts, 'id', fatal=False):
-            infile = infile or hera.file_exists('%s/%s'%(work_path, '%s.json' % opts['id']))
+            infile = infile or pyhera.file_exists('%s/%s'%(work_path, '%s.json' % opts['id']))
         if not infile:
             raise Exception(_('%s: can not locate infile')%(self.subcommand))
         
-        config = hera.read_config(infile)
+        config = pyhera.read_config(infile)
 
         verify.name(self.subcommand, config, 'name', fatal=True)
         if 'name' in opts and opts['name'] != config['name']:
@@ -55,7 +55,7 @@ class Subcmd:
         pid_file = '%s/%s'%(opts['pid-path'], opts['pid-file'] % config['id'])
         # this could happen due to user error
         if os.path.isfile(pid_file):
-            if hera.pid_exists(pid_file):
+            if pyhera.pid_exists(pid_file):
                 raise Exception(_('%s: pid file exists (use "down" subcommand to shut down the process)')%(self.subcommand))
             if opts['force']:
                 os.unlink(pid_file)
@@ -64,7 +64,7 @@ class Subcmd:
 
         install_path = None
         verify.installpath(self.subcommand, opts, 'install-path', fatal=True)
-        install_path = install_path or hera.dir_exists(opts['install-path'])
+        install_path = install_path or pyhera.dir_exists(opts['install-path'])
         if not install_path:
             raise Exception(_('%s: can not locate install directory')%(self.subcommand))
 
@@ -76,7 +76,7 @@ class Subcmd:
                 raise Exception(_('%s: install file with same name exists (use "--force" to override)')%(self.subcommand))
  
         logger.debug(_('%s: installing config for brain…')%(self.subcommand))
-        hera.write_config(outfile, config)
+        pyhera.write_config(outfile, config)
         logger.debug(_('%s: config installed to file "%s"')%(self.subcommand, outfile))
         if not opts['silent']:
             print(_('%s: config installed to file "%s"')%(self.subcommand, outfile))

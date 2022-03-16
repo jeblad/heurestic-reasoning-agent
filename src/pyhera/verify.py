@@ -5,8 +5,8 @@ import os
 import os.path
 from unicodedata import is_normalized
 from typing import Text,List
-import hera.logger as logger
-from hera import _
+import pyhera.logger as logger
+from pyhera import _
 
 class Verify:
     

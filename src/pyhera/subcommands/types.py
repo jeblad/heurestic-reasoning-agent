@@ -12,7 +12,7 @@ import ast
 import pkgutil
 import re
 
-from hera import _
+from pyhera import _
 
 _exclude_pattern = re.compile(r'\/__.+__\.py$')
 

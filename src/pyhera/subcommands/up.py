@@ -6,7 +6,7 @@
 #
 
 import argparse
-from hera import _
+from pyhera import _
 
 class Subcmd:
     def __init__(self, subcommand):

@@ -14,7 +14,7 @@ from typing import Text
 from types import SimpleNamespace
 import inspect
 import orjson
-import hera.logger as logger
+import pyhera.logger as logger
 
 __all__ = ['WORKING_DIR', 'LOCALE_DIR', 'PROG_NAME',
     'verbose', 'import_module', 'read_config', 'write_config', 'file_exists']
