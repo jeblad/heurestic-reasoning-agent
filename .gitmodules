@@ -1,3 +1,3 @@
 [submodule "doc"]
 	path = docs/sources/topics
-	url = https://github.com/jeblad/heurestic-reasoning-agent.wiki.git
+	url = https://github.com/jeblad/heuristic-reasoning-agent.wiki.git

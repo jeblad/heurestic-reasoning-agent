@@ -1,15 +1,15 @@
 Metadata-Version: 2.1
-Name: heurestic-reasoning-agent-jeblad
+Name: heuristic-reasoning-agent-jeblad
 Version: 0.0.0
 Summary: Heuristic Reasoning Agent – A framework for creating agents from models, and running and managing the agents.
-Home-page: https://jeblad.gmail.io/heurestic-reasoning-agent
+Home-page: https://jeblad.gmail.io/heuristic-reasoning-agent
 Author: John Erling Blad
 Author-email: jeblad@gmail.com
 Maintainer: John Erling Blad
 Maintainer-email: jeblad@gmail.com
 License: GNU Affero General Public License v3.0 only
-Download-URL: https://github.com/jeblad/heurestic-reasoning-agent.git
-Project-URL: Issues, https://github.com/jeblad/heurestic-reasoning-agent/issues
+Download-URL: https://github.com/jeblad/heuristic-reasoning-agent.git
+Project-URL: Issues, https://github.com/jeblad/heuristic-reasoning-agent/issues
 Project-URL: Control, https://127.0.0.1/hera/
 Keywords: artificialintelligence,ai,artificialneuralnet
 Platform: UNKNOWN

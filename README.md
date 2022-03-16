@@ -29,10 +29,10 @@ pyenv virtualenv 3.7.0 pyhera # or some higher version
 Create the directory, move into it, and activate the environment. The repo is recreated by cloning, optionally recursively to add the documentation. Lastly add the dependencies.
 
 ```bash
-mkdir heurestic-reasoning-agent
-cd heurestic-reasoning-agent
+mkdir heuristic-reasoning-agent
+cd heuristic-reasoning-agent
 pyenv local pyhera
-git clone https://github.com/jeblad/heurestic-reasoning-agent.git . # without docs
+git clone https://github.com/jeblad/heuristic-reasoning-agent.git . # without docs
 poetry init
 ```
 

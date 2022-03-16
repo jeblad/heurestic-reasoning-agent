@@ -4,13 +4,13 @@ This is just for convenience!
 
 **GitHub**
 
-- [GitHub: jeblad/heurestic-reasoning-agent](https://github.com/jeblad/heurestic-reasoning-agent/)
+- [GitHub: jeblad/heuristic-reasoning-agent](https://github.com/jeblad/heuristic-reasoning-agent/)
 
 **ReadTheDocs**
 
 - [ReadTheDocs: Read *the* Docs](https://docs.readthedocs.io/en/stable/)
-- [ReadTheDocs: project: heurestic-reasoning-agent](https://readthedocs.org/projects/heurestic-reasoning-agent/)
-- [ReadTheDocs: Heuristic Reasoning Agent](https://heurestic-reasoning-agent.readthedocs.io/en/latest/topics/basic-use.html)
+- [ReadTheDocs: project: heuristic-reasoning-agent](https://readthedocs.org/projects/heuristic-reasoning-agent/)
+- [ReadTheDocs: Heuristic Reasoning Agent](https://heuristic-reasoning-agent.readthedocs.io/en/latest/topics/basic-use.html)
 
 **Sphinx**
 
