@@ -13,44 +13,26 @@ There are separate subrepositories for each of the models.
 - poetry
 - cliff
 
-Models will typically have arequirement of either `pycuda` or `pyopencl`.
+Poetry has a minimum requirement of 3.7 for python.
+Models will typically have a requirement of either `pycuda` or `pyopencl`.
 
 ## Developer notes
 
-For those unfamiliar with poetry, it's a virtual environment and package manager. For development of this project `pyenv` is used as a layer on top of `virtualenv`.
+For those unfamiliar with `poetry`, it's a virtual environment and package manager. For development of this project `pyenv` is used as a layer on top of `virtualenv`. ([Pyenv](https://github.com/pyenv/pyenv) is installed by following [this example](http://codingadventures.org/2020/08/30/how-to-install-pyenv-in-ubuntu/) or [this with homebrew](https://medium.com/@marine.ss/installing-pyenv-on-ubuntu-20-04-c3a609a20aa2) which follows the readme. [Pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) is installed by following the readme.)
 
-Typically the repo is recreated by doing `git clone`, optionally with `--recursive` added to include documentation, then `pyenv` to set up the virtual environment, and then `poetry`.
-
-Cloning the repo
+Create a general environment for developments
 
 ```bash
-git clone https://github.com/jeblad/heurestic-reasoning-agent.git # without docs
-git clone --recursive https://github.com/jeblad/heurestic-reasoning-agent.git
+pyenv virtualenv 3.7.0 pyhera # or some higher version
 ```
 
-Move into the repo before the next commands
+Create the directory, move into it, and activate the environment. The repo is recreated by cloning, optionally recursively to add the documentation. Lastly add the dependencies.
 
 ```bash
+mkdir heurestic-reasoning-agent
 cd heurestic-reasoning-agent
-```
-
-Creating the environment
-
-```bash
-pyenv install 3.7
-pyenv local 3.7
-```
-
-Install poetry
-
-```bash
-curl -sSL https://install.python-poetry.org | python3 -
-poetry --version
-```
-
-Init repo
-
-```bash
+pyenv local pyhera
+git clone https://github.com/jeblad/heurestic-reasoning-agent.git . # without docs
 poetry init
 ```
 
