@@ -45,24 +45,34 @@ The managing software creates and runs an agent continuously. The inputs (sensor
 It should be enough to clone the repo, then `cd` into the folder, and then build a [software agent](https://en.wikipedia.org/wiki/Software_agent) with
 
 ```bash
-hera --family abraxas build
+hera build --family abraxas --layout standard --type <type>
 ```
 
-and run the agent with
+given the existence of a model named `pyhera-model-abraxas` with a layout called `standard`. The model with the layout will be instantiated as a named type, written out as a file. That type (or file) can then be instantiated as an agent (that is installed) on the system, either explicitly by calling `install`, or implicitly by attempting to run the instance by calling `up`. The agent is a child instance of the type. Training will make the agents diverge from a common starting point.
 
 ```bash
-hera --identifier <whatever> up
+hera install --callsign <callsign> <file>
+hera up --callsign <callsign> <file>
 ```
 
-A running agent can then be stopped with
+The file from instantiation of a model can be repurposed to create an army of agents. All of them should have different identifiers, otherwise it will be difficult to control them individually. Usually the identifier will be a generated psaudo random [uuid](https://en.wikipedia.org/wiki/Universally_unique_identifier), but on the basis of hashed type and [callsign](https://en.wikipedia.org/wiki/Aviator_call_sign). 
+
+A running agent can then be stopped with `down` and an identifier
 
 ```bash
-hera --identifier <whatever> down
+hera down --identifier <uuid or callsign or type>
 ```
 
-and then destroyed with
+A stopped instance can be restarted with another `up` given the correct identifier
 
 ```bash
-hera --identifier <whatever> destroy
+hera up --identifier <uuid or callsign or type>
 ```
 
+A stopped instance can also be destroyed with `destroy`
+
+```bash
+hera destroy --identifier <uuid or callsign or type>
+```
+
+The named type or callsign may not be unique, and may activate or deactivate several agents.
