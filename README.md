@@ -3,7 +3,7 @@
 ![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues-raw/jeblad/pyhera?style=for-the-badge)
 
-Heuristic Reasoning Agent (PyHERA) with [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) at host, and [CUDA](https://en.wikipedia.org/wiki/CUDA) at device integrated with [PyCUDA](https://documen.tician.de/pycuda/), or [OpenCL](https://en.wikipedia.org/wiki/OpenCL) at device integrated with [PyOpenCL](https://documen.tician.de/pyopencl/).
+Heuristic Reasoning Agent (PyHERA) with [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) at host, and [CUDA](https://en.wikipedia.org/wiki/CUDA) at device with [PyCUDA](https://documen.tician.de/pycuda/) as integration layer, or [OpenCL](https://en.wikipedia.org/wiki/OpenCL) at device with [PyOpenCL](https://documen.tician.de/pyopencl/) as integration layer.
 
 There are separate subrepositories for each of the models.
 
